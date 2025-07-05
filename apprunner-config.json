@@ -1,0 +1,16 @@
+{
+  "ImageRepository": {
+    "ImageIdentifier": "992257105959.dkr.ecr.us-east-1.amazonaws.com/autogen-studio:latest",
+    "ImageConfiguration": {
+      "Port": "8080",
+      "RuntimeEnvironmentVariables": {
+        "DATABASE_URI": "postgresql://autogen_admin:AutoGenStudio2024!SecurePass@autogen-studio-db.chgrjdh8i2jz.us-east-1.rds.amazonaws.com:5432/postgres"
+      }
+    },
+    "ImageRepositoryType": "ECR"
+  },
+  "AutoDeploymentsEnabled": false,
+  "AuthenticationConfiguration": {
+    "AccessRoleArn": "arn:aws:iam::992257105959:role/AutoGenStudioAppRunnerRole"
+  }
+}

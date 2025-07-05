@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  autogen-studio:
+    image: autogen-studio:latest
+    container_name: autogen-studio-local
+    ports:
+      - "8080:8080"
+    environment:
+      - DATABASE_URI=sqlite:///app/data/autogen_studio.db
+      - PORT=8080
+      - HOST=0.0.0.0
+      - PYTHONPATH=/app
+    volumes:
+      - ./local_data:/app/data
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/docs"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  # Optional: Add PostgreSQL for production-like setup
+  postgres:
+    image: postgres:15
+    container_name: autogen-postgres-local
+    environment:
+      - POSTGRES_DB=autogen_studio
+      - POSTGRES_USER=autogen_admin
+      - POSTGRES_PASSWORD=local_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

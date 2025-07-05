@@ -1,0 +1,11 @@
+{
+    "Changes": [{
+        "Action": "UPSERT",
+        "ResourceRecordSet": {
+            "Name": "autogen.successkpis.world",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [{"Value": "q38w2m9d5p.us-east-1.awsapprunner.com"}]
+        }
+    }]
+}

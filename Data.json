@@ -1,0 +1,41 @@
+{
+            "direction": "inbound",
+            "queues": [
+                {
+                    "queue_id": "ZWQ4A19AD1E2A0BEBCE04D66552800322C0",
+                    "cc_queue_id": "61AfyPSeRJWXVPRqvqqCzA",
+                    "queue_name": "Current Clients"
+                }
+            ],
+            "flows": [
+                {
+                    "flow_id": "DhT_hWvoRT2-uvV9obVqHg",
+                    "flow_name": "Current Clients Flow",
+                    "flow_version": "2"
+                }
+            ],
+            "engagement_id": "_twHYpB7SGKbRlRPNkdPUg",
+            "channels": [
+                {
+                    "channel": "voice"
+                }
+            ],
+            "consumer_number": "+14698941002",
+            "start_time": "2025-07-02T15:11:57Z",
+            "results": "overflowed_to_inbox",
+            "total_duration": 114,
+            "ivr_duration": 0,
+            "waiting_duration": 90,
+            "talking_duration": 0,
+            "hold_duration": 0,
+            "wrap_up_duration": 0,
+            "total_flow_duration": 0,
+            "queue_wait_type": "live_waiting",
+            "last_widget_name": "PhoneVirtual_Survey  VirtualWidget_Survey_602f0ce4-9f97-4293-a323-9b2805dc2086",
+            "dialed_numbers": [
+                "+12815843818"
+            ],
+            "ring_duration": 0,
+            "consumer_country_code": "US",
+            "consumer_country_name": "United States"
+        }
